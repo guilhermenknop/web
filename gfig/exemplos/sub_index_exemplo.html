@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GFIG A</title>
+<style>
+    body{
+        background-color: #083D60;
+    }
+    .imagem1{
+        height: 100vh;
+        position: relative;
+        right: 50px;
+    }
+    .botao {
+        background-color: #083D60;
+        color: white;
+        border: 3px solid white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        position: absolute;
+        left: 70vh;
+        width: 30vh;
+    }
+    button:hover {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #083D60;
+    }
+    .titulo {
+        position: absolute;
+        left: 85vh;
+        transform: translateX(-50%);
+        top: 15vh;
+        color: white;
+    }
+    @media (max-width: 768px) {
+    .imagem1 {
+        display: none;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10vh;
+        height: 20vh;
+    }
+
+    .botao {
+        background-color: #083D60;
+        color: white;
+        border: 3px solid white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}
+</style>
+</head>
+<body>
+    <img src="/gfig/a3.jpeg" alt="foguete" class="imagem1">
+    <h1 class="titulo">TITULO</h1>
+
+    <button class="botao" style="top: 40vh;" onclick="window.location.href='/gfig/gfig.html'">retornar</button>
+    <button class="botao" style="top: 47vh;" onclick="window.location.href=''">g</button>
+    <button class="botao" style="top: 54vh;" onclick="window.location.href=''">h</button>
+    <button class="botao" style="top: 61vh;" onclick="window.location.href=''">i</button>
+    <button class="botao" style="top: 68vh;" onclick="window.location.href=''">j</button>
+</body>
+</html>

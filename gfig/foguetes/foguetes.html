@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GFIG</title>
+<title>foguetes</title>
 <style>
     body{
         background-color: #083D60;
@@ -12,12 +12,6 @@
         height: 100vh;
         position: relative;
         right: 50px;
-    }
-    .imagem2 {
-        position: absolute;
-        left: 60vh;
-        top: 10vh;
-        height: 20vh;
     }
     .botao {
         background-color: #083D60;
@@ -29,7 +23,7 @@
         border-radius: 5px;
         transition: background-color 0.3s;
         position: absolute;
-        left: 68vh;
+        left: 70vh;
         width: 30vh;
     }
     button:hover {
@@ -37,12 +31,19 @@
         border-color: #ffffff;
         color: #083D60;
     }
+    .titulo {
+        position: absolute;
+        left: 85vh;
+        transform: translateX(-50%);
+        top: 15vh;
+        color: white;
+    }
     @media (max-width: 768px) {
     .imagem1 {
         display: none;
     }
 
-    .imagem2 {
+    .titulo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -65,17 +66,16 @@
         width: 80%;
     }
 }
-
 </style>
 </head>
 <body>
-    <img src="a3.jpeg" alt="foguete" class="imagem1">
-    <img src="b.png" alt="gfig" class="imagem2">
+    <img src="/gfig/a3.jpeg" alt="foguete" class="imagem1">
+    <h1 class="titulo">FOGUETES</h1>
 
-    <button class="botao" style="top: 40vh;" onclick="window.location.href='gfig_a.html'">a</button>
-    <button class="botao" style="top: 47vh;" onclick="window.location.href='gfig_b.html'">b</button>
-    <button class="botao" style="top: 54vh;" onclick="window.location.href='gfig_c.html'">c</button>
-    <button class="botao" style="top: 61vh;" onclick="window.location.href='gfig_d.html'">d</button>
-    <button class="botao" style="top: 68vh;" onclick="window.location.href='gfig_e.html'">e</button>
+    <button class="botao" style="top: 40vh;" onclick="window.location.href='/gfig/gfig.html'">retornar</button>
+    <button class="botao" style="top: 47vh;" onclick="window.location.href='o_que_é_um_mini_foguete/o_que_é_um_mini_foguete.html'">o que é um mini foguete?</button>
+    <button class="botao" style="top: 54vh;" onclick="window.location.href='100m/100m.html'">foguete de - 100m</button>
+    <button class="botao" style="top: 61vh;" onclick="window.location.href='100ma500m/100ma500m'">foguete de 100m a 500m</button>
+    <button class="botao" style="top: 68vh;" onclick="window.location.href='500m/500m'">foguete de + 500m</button>
 </body>
 </html>

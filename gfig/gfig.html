@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GFIG A</title>
+<title>GFIG</title>
 <style>
     body{
         background-color: #083D60;
@@ -12,6 +12,12 @@
         height: 100vh;
         position: relative;
         right: 50px;
+    }
+    .imagem2 {
+        position: absolute;
+        left: 60vh;
+        top: 10vh;
+        height: 20vh;
     }
     .botao {
         background-color: #083D60;
@@ -31,18 +37,12 @@
         border-color: #ffffff;
         color: #083D60;
     }
-    .titulo {
-        position: absolute;
-        left: 75vh;
-        top: 15vh;
-        color: white;
-    }
     @media (max-width: 768px) {
     .imagem1 {
         display: none;
     }
 
-    .titulo {
+    .imagem2 {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -65,16 +65,16 @@
         width: 80%;
     }
 }
+
 </style>
 </head>
 <body>
     <img src="a3.jpeg" alt="foguete" class="imagem1">
-    <h1 class="titulo">TITULO</h1>
+    <img src="b.png" alt="gfig" class="imagem2">
 
-    <button class="botao" style="top: 40vh;" onclick="window.location.href='gfig.html'">retornar</button>
-    <button class="botao" style="top: 47vh;" onclick="window.location.href=''">g</button>
-    <button class="botao" style="top: 54vh;" onclick="window.location.href=''">h</button>
-    <button class="botao" style="top: 61vh;" onclick="window.location.href=''">i</button>
-    <button class="botao" style="top: 68vh;" onclick="window.location.href=''">j</button>
+    <button class="botao" style="top: 40vh;" onclick="window.location.href='quem_somos/quem_somos.html'">quem somos</button>
+    <button class="botao" style="top: 47vh;" onclick="window.location.href='departamentos/departamentos.html'">departamentos</button>
+    <button class="botao" style="top: 54vh;" onclick="window.location.href='foguetes/foguetes.html'">foguetes</button>
+    <button class="botao" style="top: 61vh;" onclick="window.location.href='entre_em_contato/entre_em_contato.html'">entre em contato</button>
 </body>
 </html>
