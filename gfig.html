@@ -37,6 +37,35 @@
         border-color: #ffffff;
         color: #083D60;
     }
+    @media (max-width: 768px) {
+    .imagem1 {
+        display: none;
+    }
+
+    .imagem2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10vh;
+        height: 20vh;
+    }
+
+    .botao {
+        background-color: #083D60;
+        color: white;
+        border: 3px solid white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}
+
 </style>
 </head>
 <body>
