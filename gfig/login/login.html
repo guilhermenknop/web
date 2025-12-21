@@ -49,11 +49,13 @@
     <button onclick="verificarLogin()">Login</button>
     <img src="../a.jpeg" alt="foguete" class="logo" onclick="window.location.href='../gfig.html'">
 
+    <script src="secret.js"></script>
     <script>
         function verificarLogin() {
             var login = document.getElementById("login").value;
 
-            if (login === "fogute") {
+            if (login === SENHA_CORRETA) {
+                localStorage.setItem("logado", "true");
                 location.href = "salademembros/sala_de_membros.html";
             } else {
                 alert("Senha incorreta");
