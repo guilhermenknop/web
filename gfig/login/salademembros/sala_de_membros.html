@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sala de membros</title>
+<script src="../secret.js"></script>
+
+    
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../login.html";
+        }
+    </script>
 <style>
     body{
         background-color: #083D60;
@@ -69,7 +80,7 @@
 </style>
 </head>
 <body>
-    <script src="auth.js"></script>
+   
 
     <img src="../../a3.jpeg" alt="foguete" class="imagem1">
     <h1 class="titulo">SALA DE MEMBROS</h1>

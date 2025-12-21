@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ata06-11-25</title>
+    <script src="../../../../secret.js"></script>
+
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../../../login.html";
+        }
+    </script>
+
+</head>
+<body>
+    <p>ATA Reunião dia 06/11/2025<br><br>presentes: Rafa, Gabriela, Samuel, Pereira, Thamy, Izabely, Sarah, Henrique, Julia W, Fernanda, Luiza, Nicolas, Matheus, Gui, Mauricio, Rauta. <br><br>* tivemos apresentações dos projetos de motor comercial<br>* ⁠FAZER FOGUETES (após ajustar os projetos que precisam)</p>
+</body>
+</html>

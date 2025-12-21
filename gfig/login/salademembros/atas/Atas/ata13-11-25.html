@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ata13-11-25</title>
+    <script src="../../../../secret.js"></script>
+
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../../../login.html";
+        }
+    </script>
+
+</head>
+<body>
+    <p>Ata:13/11/25<br>Presentes: Rauta, Maurício, Rômulo, Sarah,Fernanda,Henrique,JuliaW,Isabele,Luiza,Rafaela,Gabriela,Matheus,Nicolas,Bryan.<br><br>Desafio: 05/12/2025 <br> •Apogeu50m</p>
+</body>
+</html>

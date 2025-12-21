@@ -50,18 +50,28 @@
     <img src="../a.jpeg" alt="foguete" class="logo" onclick="window.location.href='../gfig.html'">
 
     <script src="secret.js"></script>
-    <script>
-        function verificarLogin() {
-            var login = document.getElementById("login").value;
+<script>
+async function verificarLogin() {
+    const senha = document.getElementById("login").value;
 
-            if (login === SENHA) {
-                localStorage.setItem("logado", "true");
-                location.href = "salademembros/sala_de_membros.html";
-            } else {
-                alert("Senha incorreta");
-            }
-        }
-    </script>
+    const hashDigitado = await crypto.subtle.digest(
+        "SHA-256",
+        new TextEncoder().encode(senha)
+    );
+
+    const hashHex = [...new Uint8Array(hashDigitado)]
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
+
+    if (hashHex === HASH_SENHA) {
+        localStorage.setItem("logado", hashHex);
+        location.href = "salademembros/sala_de_membros.html";
+    } else {
+        alert("Senha incorreta");
+    }
+}
+</script>
+
 
 </body>
 </html>

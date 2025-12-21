@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ata30-10-25</title>
+    <script src="../../../../secret.js"></script>
+
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../../../login.html";
+        }
+    </script>
+
+</head>
+<body>
+    <p>ATA reuniao 30/10/25<br><br>presentes: thamily, mauricio, rauta, henrique, sarah, samuel, gui, yasmin, izabely, luiza, fernanda, pereira, rafa, julia w, romulo.<br><br>* raspar foguetes<br>* ⁠teste estático segunda-feira<br>* ⁠lançamento de foguete de pet na quarta <br>* ⁠fazer foguetes de motor comercial</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ata30-10-25</title>
+    <script src="../../../../secret.js"></script>
+
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../login.html";
+        }
+    </script>
+
+</head>
+<body>
+    <p></p>
+</body>
+</html>

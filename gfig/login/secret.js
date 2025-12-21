@@ -1,1 +1,1 @@
-const SENHA = "fogute";
+const HASH_SENHA = "996ff2764e51d2b7775150cf9f0ffe5063d46a41c9a6bcb043737221c38150f5";

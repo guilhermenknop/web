@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ata04-12-25</title>
+    <script src="../../../../secret.js"></script>
+
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../../../login.html";
+        }
+    </script>
+
+</head>
+<body>
+    <p>ATA REUNIAO 04/12/25<br> <br>presentes: rauta, mauricio, gui, sarah, thay, thamy, julia, pereira, rafa, carol, bryan, rômulo. <br><br>* nao terá lançamento de foguetes de motor comercial na sexta dia 05/12;<br>* ⁠testar base de lançamento de foguete de pet, e se funcionar ou nao avisar no grupo se terá lançamento amanhã ou não;<br>* ⁠semestre que vem mauricio e rauta saem para doutorado, precisam ver ainda sobre as bolsas;</p>
+</body>
+</html>
