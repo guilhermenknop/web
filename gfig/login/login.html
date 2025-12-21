@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            background-color: #083D60;
+        }
+
+        .titulo {
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 5%;
+            transform: translateX(-50%);
+        }
+
+        .senha {
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+            padding: 8px;
+        }
+
+        button {
+            position: absolute;
+            left: 50%;
+            top: 22%;
+            transform: translateX(-50%);
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .logo {
+            position: absolute; top: 2vh;
+            height: 10.8vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 class="titulo">LOGIN</h3>
+
+    <input type="password" id="login" placeholder="Senha" class="senha">
+    <button onclick="verificarLogin()">Login</button>
+    <img src="../a.jpeg" alt="foguete" class="logo" onclick="window.location.href='../gfig.html'">
+
+    <script>
+        function verificarLogin() {
+            var login = document.getElementById("login").value;
+
+            if (login === "fogute") {
+                location.href = "salademembros/sala_de_membros.html";
+            } else {
+                alert("Senha incorreta");
+            }
+        }
+    </script>
+
+</body>
+</html>

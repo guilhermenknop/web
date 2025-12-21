@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GFIG</title>
+<title>sala de membros</title>
 <style>
     body{
         background-color: #083D60;
@@ -12,12 +12,6 @@
         height: 100vh;
         position: relative;
         right: 50px;
-    }
-    .imagem2 {
-        position: absolute;
-        left: 60vh;
-        top: 10vh;
-        height: 20vh;
     }
     .botao {
         background-color: #083D60;
@@ -29,7 +23,7 @@
         border-radius: 5px;
         transition: background-color 0.3s;
         position: absolute;
-        left: 68vh;
+        left: 70vh;
         width: 30vh;
     }
     button:hover {
@@ -37,18 +31,19 @@
         border-color: #ffffff;
         color: #083D60;
     }
-    .imagem3 {
+    .titulo {
         position: absolute;
-        height: 5vh;
-        top: 5vh;
-        right: 5vh;
+        left: 85vh;
+        transform: translateX(-50%);
+        top: 15vh;
+        color: white;
     }
     @media (max-width: 768px) {
     .imagem1 {
         display: none;
     }
 
-    .imagem2 {
+    .titulo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -71,18 +66,14 @@
         width: 80%;
     }
 }
-
-
 </style>
 </head>
 <body>
-    <img src="a3.jpeg" alt="foguete" class="imagem1">
-    <img src="b.png" alt="gfig" class="imagem2">
-    <img src="cadeado.png" alt="cadeado" class="imagem3" onclick="window.location.href='login/login.html'">
+    <img src="../../a3.jpeg" alt="foguete" class="imagem1">
+    <h1 class="titulo">SALA DE MEMBROS</h1>
 
-    <button class="botao" style="top: 40vh;" onclick="window.location.href='quem_somos/quem_somos.html'">quem somos</button>
-    <button class="botao" style="top: 47vh;" onclick="window.location.href='departamentos/departamentos.html'">departamentos</button>
-    <button class="botao" style="top: 54vh;" onclick="window.location.href='foguetes/foguetes.html'">foguetes</button>
-    <button class="botao" style="top: 61vh;" onclick="window.location.href='entre_em_contato/entre_em_contato.html'">entre em contato</button>
+    <button class="botao" style="top: 40vh;" onclick="window.location.href='../../gfig.html'">retornar</button>
+    <button class="botao" style="top: 47vh;" onclick="window.location.href='atas/atas.html'">atas</button>
+    
 </body>
 </html>
