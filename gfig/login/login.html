@@ -54,7 +54,7 @@
         function verificarLogin() {
             var login = document.getElementById("login").value;
 
-            if (login === SENHA_CORRETA) {
+            if (login === SENHA) {
                 localStorage.setItem("logado", "true");
                 location.href = "salademembros/sala_de_membros.html";
             } else {
