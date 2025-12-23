@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFIG b</title>
+    <script src="../../secret.js"></script>
+    <script>
+        const token = localStorage.getItem("logado");
+
+        if (!token || token !== HASH_SENHA) {
+            localStorage.removeItem("logado");
+            window.location.href = "../login.html";
+        }
+    </script>
+
+    <style>
+        .coluna {
+            background-color: #083D60;
+            height: 100vh;
+            width: 10vh;
+        }
+
+        .texto {
+            position: absolute;
+            top: 0;
+            left: 20vh;
+        }
+
+        .logo {
+            position: absolute;
+            top: 2vh;
+            height: 10.8vh;
+            cursor: pointer;
+        }
+
+        .tabela {
+            position: absolute;
+            top: 10vh;
+            left: 20vh;
+            width: 100vh;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(177, 177, 177);
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="coluna"></div>
+
+    <div class="texto">
+        <h1>LANÇAMENTOS</h1>
+    </div>
+
+    <div class="tabela">
+        <table>
+            <tr>
+                <th>Arquivo</th>
+                <th>nome</th>
+                <th>Data</th>
+                <th>Observações</th>
+            </tr>
+            <tr>
+                <td><a href="lancamentos/test.html">TEST</a></td>
+                <td>teste</td>
+                <td>dd/mm/yy</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td>-</td>
+            </tr>
+            
+        </table>
+    </div>
+
+    <img src="../a.jpeg"
+         alt="foguete"
+         class="logo"
+         onclick="window.location.href='../gfig.html'">
+</body>
+</html>
