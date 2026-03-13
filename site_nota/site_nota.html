@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Notas</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(
+0deg,
+rgb(64,64,85),
+rgb(126,125,125),
+rgb(64,64,85)
+);
+}
+
+.container{
+width:90vw;
+height:90vh;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:1fr 1fr;
+
+gap:40px;
+}
+
+.divsec{
+background:gray;
+border-radius:10px;
+box-shadow:0 0 10px black;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+
+padding:20px;
+}
+
+.titulodiv{
+margin-bottom:20px;
+}
+
+.linha-notas{
+display:flex;
+gap:25px;
+}
+
+.notas{
+background:rgb(180,180,180);
+width:120px;
+height:200px;
+
+border-radius:8px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+gap:10px;
+}
+
+.input{
+width:70px;
+height:30px;
+}
+
+.resutado{
+height:100px;
+width:500px;
+background-color:rgb(180,180,180);
+border-radius:8px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.output{
+font-size:xx-large;
+}
+
+/* REC desativada */
+
+.rec-desativada{
+opacity:0.4;
+pointer-events:none;
+transform:scale(0.9);
+}
+
+.botao{
+margin-top:20px;
+padding:10px 20px;
+cursor:pointer;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="divsec">
+
+<h1 class="titulodiv">Notas</h1>
+
+<div class="linha-notas">
+
+<div class="notas">
+<h2>P1</h2>
+<input type="number" id="p1" class="input">
+</div>
+
+<div class="notas">
+<h2>P2</h2>
+<input type="number" id="p2" class="input">
+</div>
+
+<div class="notas">
+<h2>Práticas</h2>
+<input type="number" id="praticas" class="input">
+</div>
+
+</div>
+
+</div>
+
+<div class="divsec">
+
+<h1 class="titulodiv">Frequência</h1>
+
+<div class="linha-notas">
+
+<div class="notas">
+<h2>Aulas</h2>
+<input type="number" id="aulas" class="input">
+</div>
+
+<div class="notas">
+<h2>Faltas</h2>
+<input type="number" id="faltas" class="input">
+</div>
+
+</div>
+
+</div>
+
+<div class="divsec rec rec-desativada" id="rec">
+
+<h1 class="titulodiv">Rec</h1>
+
+<div class="linha-notas">
+
+<div class="notas">
+<h2>Nota</h2>
+<input type="number" id="notarec" class="input">
+<button onclick="calcularRec()">Enviar</button>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="divsec">
+
+<h1 class="titulodiv">Resultado</h1>
+
+<div class="resutado">
+<output class="output" id="resultado">---</output>
+</div>
+
+<button class="botao" onclick="calcular()">Calcular</button>
+
+</div>
+
+</div>
+
+<script>
+
+let media = 0
+
+function calcular(){
+
+let P1 = Number(document.getElementById("p1").value)
+let P2 = Number(document.getElementById("p2").value)
+let praticas = Number(document.getElementById("praticas").value)
+
+let aulas = Number(document.getElementById("aulas").value)
+let faltas = Number(document.getElementById("faltas").value)
+
+media = (P1*0.35 + P2*0.45 + praticas*0.2)
+
+let resultado = ""
+
+let frequencia = (aulas - faltas) / aulas
+
+let recDiv = document.getElementById("rec")
+
+if(frequencia < 0.75){
+
+resultado = "Reprovado por falta"
+
+recDiv.classList.add("rec-desativada")
+
+}
+
+else if(media >= 6){
+
+resultado = "Aprovado"
+
+recDiv.classList.add("rec-desativada")
+
+}
+
+else if(media < 3){
+
+resultado = "Reprovado"
+
+recDiv.classList.add("rec-desativada")
+
+}
+
+else{
+
+resultado = "Fazer Recuperação"
+
+recDiv.classList.remove("rec-desativada")
+
+}
+
+document.getElementById("resultado").textContent = resultado
+
+}
+function calcularRec(){
+
+let rec = Number(document.getElementById("notarec").value)
+
+let mediaFinal = (media + rec) / 2
+
+let resultado = ""
+
+if(mediaFinal >= 6){
+
+resultado = "Aprovado após recuperação"
+
+}
+else{
+
+resultado = "Reprovado após recuperação"
+
+}
+
+document.getElementById("resultado").textContent = resultado
+
+}
+</script>
+
+</body>
+</html>
